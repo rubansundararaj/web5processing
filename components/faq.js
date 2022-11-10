@@ -35,21 +35,21 @@ export default function Faq() {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "What is the transaction fee?",
+    answer: "We plan to charge flat 1%",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Is Micropayments possible",
+    answer: "Yes, you can embed our gate to receive micro payments.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "How long does it take to recive my payments",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "We processs payments within 24 hours",
   },
   {
     question: "Do you offer technical support? ",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes we offer technical support for all our enterprise customers",
   },
 ];

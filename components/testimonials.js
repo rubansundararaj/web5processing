@@ -13,42 +13,41 @@ export default function Testimonials() {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              It is a no brainer to not use this platform <Mark> at 1% processing fee</Mark>
+              definitely a user when it is avilable.
             </p>
 
             <Avatar
-              image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
+              image={"/"}
+              name="Tranajeet"
+              title="Generative AI Blogger"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+              We operate on razor thin margin, their <Mark>1% cost</Mark>
+              would go a long way to reinvest it on customer acqusition.
             </p>
 
             <Avatar
               image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              name="Enrico"
+              title="Founder at Unitary"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I've seen. I
-              would use this for anything.
+              This is <Mark>awesome</Mark> and I am waiting.
             </p>
 
             <Avatar
               image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              name="Rishabh"
+              title="Co-founder of CardScoop"
             />
           </div>
         </div>
@@ -61,14 +60,14 @@ function Avatar(props) {
   return (
     <div className="flex items-center mt-8 space-x-3">
       <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-        <Image
+        {/* <Image
           src={props.image}
           width="40"
           height="40"
           alt="Avatar"
           layout="responsive"
           placeholder="blur"
-        />
+        /> */}
       </div>
       <div>
         <div className="text-lg font-medium">{props.name}</div>
