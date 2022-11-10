@@ -28,25 +28,23 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>VVFive - Web5 Payment infrastructure for all business needs</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Web5 Payment infrastructure for all business needs, Best of both the worlds, web2 to keep you compliant and web3 to keep the cost low."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/vvfivepurple.jpeg" />
       </Head>
 
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        pretitle="VVFive"
+        title=" What we do">
+        Web5 Payment infrastructure for all business needs, Best of both the worlds, web2 to keep you compliant and web3 infrastructure to keep the cost low.
       </SectionTitle>
       <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
+      {/* <Benefits imgPos="right" data={benefitTwo} /> 
       <SectionTitle
         pretitle="Watch a video"
         title="Learn how to fullfil your needs">
@@ -54,7 +52,7 @@ export default function Home() {
         Analysts says a landing page with video has 3% more conversion rate. So,
         don't forget to add one. Just like this.
       </SectionTitle>
-      <Video />
+      <Video />*/}
       <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said">

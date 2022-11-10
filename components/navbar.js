@@ -23,14 +23,14 @@ export default function Navbar() {
                   <a className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
                       <img
-                        src="/img/logo.svg"
+                        src="/img/vvfivenavlogo.jpeg"
                         alt="N"
-                        width="32"
-                        height="32"
+                        width="100"
+                        height="100"
                         className="w-8"
                       />
                     </span>
-                    <span>Nextly</span>
+                    <span>VVFIVE</span>
                   </a>
                 </Link>
 

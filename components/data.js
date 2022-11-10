@@ -11,23 +11,23 @@ import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Benefits",
+  desc: "We use web3 to enable payments and web2 expereince to keep the user expereince same and compliant with local government",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Low fee",
+      desc: "No setup cost, we charge flat 1% transaction fee for any type of payments",
       icon: <EmojiHappyIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Micro transaction",
+      desc: "Integrate micro transaction into your apps, games and podcast and recive payments directly.",
       icon: <ChartSquareBarIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Pay or receive from anyone anywhere",
+      desc: "Instant cross border payment to anyone.",
       icon: <CursorClickIcon />,
     },
   ],
