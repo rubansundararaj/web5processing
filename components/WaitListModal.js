@@ -92,7 +92,7 @@ function WaitListModal({ text }) {
                       />
                       <input
                         type="checkbox"
-                        className="hidden"
+                        className={"hidden"}
                         style={{ display: "none" }}
                         {...register("botcheck")}></input>
 
@@ -103,6 +103,7 @@ function WaitListModal({ text }) {
                         Name
                         </label>
                         <input
+
                           type="text"
                           id="full_name"
                           placeholder="John Doe"
@@ -110,7 +111,7 @@ function WaitListModal({ text }) {
                             required: "Full name is required",
                             maxLength: 80,
                           })}
-                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                          className={`text-black w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.name
                               ? "border-red-600 focus:border-red-600 ring-red-100"
                               : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
@@ -140,7 +141,7 @@ function WaitListModal({ text }) {
                             },
                           })}
                           placeholder="you@company.com"
-                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                          className={`text-black w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.email
                               ? "border-red-600 focus:border-red-600 ring-red-100"
                               : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
@@ -168,7 +169,7 @@ function WaitListModal({ text }) {
                             required: "Enter your Message",
                           })}
                           placeholder="Your Message"
-                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
+                          className={` text-black w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
                             errors.message
                               ? "border-red-600 focus:border-red-600 ring-red-100"
                               : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
@@ -234,7 +235,7 @@ function WaitListModal({ text }) {
                         <button
                           className="mt-6 text-indigo-600 focus:outline-none"
                           onClick={() => setShowModal(false)}>
-                          Go back
+                          Close
                         </button>
                       </div>
                     </>
