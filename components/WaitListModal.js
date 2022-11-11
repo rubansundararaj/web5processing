@@ -69,9 +69,13 @@ function WaitListModal({ text }) {
                   </p>
                 </div> */}
                 <div className="flex-grow h-full p-6 overflow-auto">
-                <p className="text-black opacity-80 text-2xl">
-                    Join Our Waitlist!
-                  </p>
+
+                    {
+                        !isSubmitSuccessful && !isSuccess && <p className="text-black opacity-80 text-2xl">
+                        Join Our Waitlist!
+                      </p>
+                    }
+                
                   <br/>
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -229,7 +233,7 @@ function WaitListModal({ text }) {
                           />
                         </svg>
                         <h3 className="py-5 text-xl text-green-500" onClick={() => setShowModal(false)}>
-                          Message sent successfully
+                          Thank you for joining our waitlist
                         </h3>
                         <p className="text-gray-700 md:px-3">{Message}</p>
                         <button
