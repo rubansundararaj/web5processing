@@ -95,11 +95,11 @@ export default function Navbar() {
         </div> */}
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/">
+        
             <div>
             <WaitListModal text={"Join Waitlist"}/>
             </div>
-          </Link>
+       
 
           <ThemeChanger />
         </div>
