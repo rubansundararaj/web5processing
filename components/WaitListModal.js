@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { Disclosure, Transition } from "@headlessui/react";
 
-export default function PopupWidget() {
+function WaitListModal({ text }) {
+  const [showModal, setShowModal] = React.useState(false);
   const {
     register,
     handleSubmit,
@@ -12,13 +12,11 @@ export default function PopupWidget() {
   } = useForm({
     mode: "onTouched",
   });
+
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState("");
-
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
-
   const onSubmit = async (data, e) => {
- 
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -47,71 +45,34 @@ export default function PopupWidget() {
   };
 
   return (
-    <div>
-      <Disclosure>
-        {({ open }) => (
-          <>
-            <Disclosure.Button className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
-              <span className="sr-only">Open Contact form Widget</span>
-              <Transition
-                show={!open}
-                enter="transition duration-200 transform ease"
-                enterFrom="opacity-0 -rotate-45 scale-75"
-                leave="transition duration-100 transform ease"
-                leaveTo="opacity-0 -rotate-45"
-                className="absolute w-6 h-6 text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>{" "}
-              </Transition>
-
-              <Transition
-                show={open}
-                enter="transition duration-200 transform ease"
-                enterFrom="opacity-0 rotate-45 scale-75"
-                leave="transition duration-100 transform ease"
-                leaveTo="opacity-0 rotate-45"
-                className="absolute w-6 h-6 text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>{" "}
-              </Transition>
-            </Disclosure.Button>
-            <Transition
-              className="fixed  z-50 bottom-[100px] top-0 right-0  left-0 sm:top-auto sm:right-5 sm:left-auto"
-              enter="transition duration-200 transform ease"
-              enterFrom="opacity-0 translate-y-5"
-              leave="transition duration-200 transform ease"
-              leaveTo="opacity-0 translate-y-5">
-              <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
-                <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
+    <>
+      <button
+        className="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        type="button"
+        onClick={() => setShowModal(true)}
+      >
+        {text}
+      </button>
+      {showModal ? (
+        <>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+               
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+             
+                  {/* <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
                   <h3 className="text-lg text-white">How can we help?</h3>
                   <p className="text-white opacity-50">
                     We usually respond in a few hours
                   </p>
-                </div>
-                <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
+                </div> */}
+                <div className="flex-grow h-full p-6 overflow-auto">
+                <p className="text-black opacity-80 text-2xl">
+                    Join Our Waitlist!
+                  </p>
+                  <br/>
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
                       <input
@@ -139,7 +100,7 @@ export default function PopupWidget() {
                         <label
                           htmlFor="full_name"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Full Name
+                        Name
                         </label>
                         <input
                           type="text"
@@ -246,20 +207,7 @@ export default function PopupWidget() {
                           )}
                         </button>
                       </div>
-                      <p
-                        className="text-xs text-center text-gray-400"
-                        id="result">
-                        <span>
-                          Powered by{" "}
-                          <a
-                            href="https://Web3Forms.com"
-                            className="text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Web3Forms
-                          </a>
-                        </span>
-                      </p>
+                   
                     </form>
                   )}
 
@@ -279,13 +227,13 @@ export default function PopupWidget() {
                             strokeWidth="3"
                           />
                         </svg>
-                        <h3 className="py-5 text-xl text-green-500">
+                        <h3 className="py-5 text-xl text-green-500" onClick={() => setShowModal(false)}>
                           Message sent successfully
                         </h3>
                         <p className="text-gray-700 md:px-3">{Message}</p>
                         <button
                           className="mt-6 text-indigo-600 focus:outline-none"
-                          onClick={() => reset()}>
+                          onClick={() => setShowModal(false)}>
                           Go back
                         </button>
                       </div>
@@ -314,17 +262,26 @@ export default function PopupWidget() {
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
                         className="mt-6 text-indigo-600 focus:outline-none"
-                        onClick={() => reset()}>
+                        onClick={() => setShowModal(false)}>
                         Go back
                       </button>
                     </div>
                   )}
                 </div>
-              </Disclosure.Panel>
-            </Transition>
-          </>
-        )}
-      </Disclosure>
-    </div>
+                
+                
+                
+                </div>
+           
+           
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+    </>
   );
 }
+
+export default WaitListModal;

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
+import WaitListModal from "./WaitListModal";
 
 export default function Navbar() {
   const navigation = [
@@ -95,9 +96,9 @@ export default function Navbar() {
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link href="/">
-            <a className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-              Get Started
-            </a>
+            <div>
+            <WaitListModal text={"Join Waitlist"}/>
+            </div>
           </Link>
 
           <ThemeChanger />

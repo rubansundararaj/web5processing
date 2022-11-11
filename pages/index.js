@@ -11,6 +11,7 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import WaitListModal from "../components/WaitListModal";
 
 
 export default function Home() {
@@ -41,8 +42,9 @@ export default function Home() {
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
        
       </SectionTitle>
+      <WaitListModal/>
       <Faq />
-      {/* <Cta /> */}
+       {/* <Cta />  */}
       <Footer />
       <PopupWidget />
     </>
