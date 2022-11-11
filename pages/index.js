@@ -12,23 +12,12 @@ import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 
-//import dynamic from "next/dynamic";
-
-// const Video = dynamic(() => import("../components/video"));
-
-// const Benefits = dynamic(() => import("../components/benefits"));
-// const Footer = dynamic(() => import("../components/footer"));
-// const Testimonials = dynamic(() => import("../components/testimonials"));
-// const Cta = dynamic(() => import("../components/cta"));
-// const Faq = dynamic(() => import("../components/faq"));
-
-// const PopupWidget = dynamic(() => import("../components/popupWidget"));
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>VVFive - Web5 Payment infrastructure for all business needs</title>
+        <title>ANYI - Web5 Payment infrastructure for all business needs</title>
         <meta
           name="description"
           content="Web5 Payment infrastructure for all business needs, Best of both the worlds, web2 to keep you compliant and web3 to keep the cost low."
@@ -39,25 +28,14 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="VVFive"
+        pretitle="ANYI"
         title=" What we do">
         Web5 Payment infrastructure for all business needs, Best of both the worlds, web2 to keep you compliant and web3 infrastructure to keep the cost low.
       </SectionTitle>
       <Benefits data={benefitOne} />
-      {/* <Benefits imgPos="right" data={benefitTwo} /> 
-      <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don't forget to add one. Just like this.
-      </SectionTitle>
-      <Video />*/}
       <SectionTitle
         pretitle="Testimonials"
         title="">
-        {/* Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers. */}
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">

@@ -24,7 +24,7 @@ export default function Footer() {
                       className="w-8"
                     />
                   </span>
-                  <span>VVFIVE</span>
+                  <span>ANYI</span>
                 </a>
               </Link>
             </div>
@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" VVFIVE"}
+          Copyright © {new Date().getFullYear()}. Made with ♥ by{" ANYI"}
           <a href="https://web3templates.com/" target="_blank" rel="noopener">
           
           </a>{" "}

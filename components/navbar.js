@@ -30,7 +30,7 @@ export default function Navbar() {
                         className="w-8"
                       />
                     </span>
-                    <span>VVFIVE</span>
+                    <span>ANYI</span>
                   </a>
                 </Link>
 
