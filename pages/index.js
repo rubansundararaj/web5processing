@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ANYI - Web5 Payment infrastructure for all business needs</title>
+        <title>VVFIVE - Web5 Payment infrastructure for all business needs</title>
         <meta
           name="description"
           content="Web5 Payment infrastructure for all business needs, Best of both the worlds, web2 to keep you compliant and web3 to keep the cost low."
@@ -29,7 +29,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="ANYI"
+        pretitle="VVFIVE"
         title=" What we do">
         Web5 Payment infrastructure for all business needs, Best of both the worlds, web2 to keep you compliant and web3 infrastructure to keep the cost low.
       </SectionTitle>
